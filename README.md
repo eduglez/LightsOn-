@@ -2,16 +2,16 @@
 Simple Light Switcher from Desktop with Arduino
 
 ## Compile
-
+`ant`
 ## Run
 ### Windows 32 bit
 ```
-start javaw -Djava.library.path="%CD%\lib\win32" -cp .;.\lib\commons-io-2.4.jar;.\lib\RXTXcomm.jar es.csic.lec.lightson.Main
+start javaw -Djava.library.path="%CD%\lib\win32" -cp .\build;.\lib\commons-io-2.4.jar;.\lib\RXTXcomm.jar es.csic.lec.lightson.Main
 ```
 
 ### Windows 64 bit
 ```
-start javaw -Djava.library.path="%CD%\lib\win64" -cp .;.\lib\commons-io-2.4.jar;.\lib\RXTXcomm.jar es.csic.lec.lightson.Main
+start javaw -Djava.library.path="%CD%\lib\win64" -cp .\build;.\lib\commons-io-2.4.jar;.\lib\RXTXcomm.jar es.csic.lec.lightson.Main
 ```
 
 ## Libraries
