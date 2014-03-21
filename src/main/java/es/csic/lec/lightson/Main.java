@@ -1,7 +1,7 @@
 package es.csic.lec.lightson;  
 
 import java.awt.*;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 import javax.swing.*;
 import org.apache.commons.io.IOUtils;
@@ -67,7 +67,7 @@ public class Main {
             	String comPort=null;
                 try {
                 	Properties prop = new Properties();
-                	prop.load(Main.class.getResourceAsStream(PROPERTIES_FILE));
+                	prop.load(new FileInputStream(PROPERTIES_FILE));
                 	comPort=prop.getProperty(COMPORT_PROPERTIE);
                 	if(comPort!=null){
                 		controller.onChangeCommTo(comPort);

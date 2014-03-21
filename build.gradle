@@ -1,0 +1,28 @@
+apply plugin:'java'
+apply plugin:'application'
+
+version = '1.0.2'
+
+mainClassName = 'es.csic.lec.lightson.Main'
+
+repositories {
+    mavenCentral()
+    maven {
+        name "rxtx"
+        url 'https://raw.github.com/grafjo/rxtx/master/releases/'
+        }
+}
+
+test{
+    systemProperties 'java.library.path': file('libs/ext/win64/rxtxSerial.dll').parent
+}
+
+run {
+    systemProperties 'java.library.path': file('libs/ext/win64/rxtxSerial.dll').parent
+}
+
+dependencies {
+    compile 'commons-io:commons-io:2.4'
+    compile 'gnu.io:rxtx:2.2pre2'
+    testCompile 'junit:junit:4.11'
+}

@@ -1,18 +1,10 @@
 # LightsOn!
 Simple Light Switcher from Desktop with Arduino
 
-## Compile
-`ant`
 ## Run
-### Windows 32 bit
-```
-start javaw -Djava.library.path="%CD%\lib\win32" -cp .\build;.\lib\commons-io-2.4.jar;.\lib\RXTXcomm.jar es.csic.lec.lightson.Main
-```
-
-### Windows 64 bit
-```
-start javaw -Djava.library.path="%CD%\lib\win64" -cp .\build;.\lib\commons-io-2.4.jar;.\lib\RXTXcomm.jar es.csic.lec.lightson.Main
-```
+`gradle run`
+## Tests
+`gradle test`
 
 ## Libraries
 * [Apache Commons IO 2.4](http://commons.apache.org/proper/commons-io/)
